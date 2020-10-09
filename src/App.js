@@ -7,7 +7,7 @@ const App = () => {
   
   useEffect(()=>{
     const fetchChar = () => {
-    axios.get(`https://swapi.dev/api/people/1/`)
+    axios.get(`https://swapi.dev/api/people/5/`)
       .then(res => {
         setChar(res.data)
       })
@@ -33,8 +33,10 @@ const App = () => {
       <h1 className="Header">Characters</h1>
       <h1>All the best characters!</h1>
       <h1>{char.name}</h1> 
+     
     </div>
   );
 }
 
 export default App;
+
