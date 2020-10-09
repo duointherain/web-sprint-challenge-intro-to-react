@@ -10,6 +10,12 @@ const App = () => {
     axios.get(`https://swapi.dev/api/people/5/`)
       .then(res => {
         setChar(res.data)
+    //     <ol>
+    //   {setChar.map(name => (
+    //     <li key={name}>{name}</li>
+    //   ))}
+    // </ol>
+
       })
       .catch(err => {
         
@@ -18,7 +24,11 @@ const App = () => {
     fetchChar()
 },[])
   
-
+{/* <ol>
+      {reptiles.map(reptile => (
+        <li key={reptile}>{reptile}</li>
+      ))}
+    </ol> */}
 
 
   // Try to think through what state you'll need for this app before starting. Then build out
