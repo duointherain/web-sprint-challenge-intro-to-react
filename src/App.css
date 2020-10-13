@@ -9,14 +9,14 @@
 div{
   display: flex;
   flex-direction: column;
-background-color: antiquewhite;
-opacity: 50%;
-margin: auto;
+  
 }
-h1{
-  opacity: 100%;
+
+.fancy{
+  margin: auto;
+  border:solid burlywood;
+  padding: 3rem;
+
 }
-h2{
-  opacity: 100%;
-}
+
 

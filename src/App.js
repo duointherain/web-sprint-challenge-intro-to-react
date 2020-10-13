@@ -43,8 +43,9 @@ const App = () => {
         console.log(item)
         return(
           <div>
-        <h1>{item.name}</h1>
-        <h2>Their eyes are: {item.eye_color}</h2>
+        <h1 className='fancy'>{item.name}</h1>
+       
+        <h2 className='fancy'>Their eyes are: {item.eye_color}</h2>
         </div>
         )
 
