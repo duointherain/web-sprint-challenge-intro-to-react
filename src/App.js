@@ -3,18 +3,15 @@ import axios from 'axios';
 import './App.css';
 
 const App = () => {
-  const [char, setChar ] = useState({});
+  const [char, setChar ] = useState([]);
   
   useEffect(()=>{
     const fetchChar = () => {
-    axios.get(`https://swapi.dev/api/people/5/`)
+    axios.get(`https://swapi.dev/api/people`)
       .then(res => {
-        setChar(res.data)
-    //     <ol>
-    //   {setChar.map(name => (
-    //     <li key={name}>{name}</li>
-    //   ))}
-    // </ol>
+        setChar(res.data.results)
+        console.log(res.data.results);
+   
 
       })
       .catch(err => {
@@ -42,7 +39,19 @@ const App = () => {
     <div className="App">
       <h1 className="Header">Characters</h1>
       <h1>All the best characters!</h1>
-      <h1>{char.name}</h1> 
+      {char.map(item => {
+        console.log(item)
+        return(
+          <div>
+        <h1>{item.name}</h1>
+        <h2>Their eyes are: {item.eye_color}</h2>
+        </div>
+        )
+
+      }
+
+      )}
+      
      
     </div>
   );

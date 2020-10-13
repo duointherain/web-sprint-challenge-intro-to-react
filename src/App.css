@@ -6,3 +6,17 @@
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+div{
+  display: flex;
+  flex-direction: column;
+background-color: antiquewhite;
+opacity: 50%;
+margin: auto;
+}
+h1{
+  opacity: 100%;
+}
+h2{
+  opacity: 100%;
+}
+
